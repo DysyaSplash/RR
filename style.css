@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    background-color: #83b588;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0; /* Начальная прозрачность */
+    animation: fadeIn 1s forwards; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    background-color: #2fce17;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D эффект */
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:active {
+    transform: translateY(2px); /* Эффект нажатия */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button.active {
+    animation: pulse 1s infinite alternate; /* Подсветка */
+}
+
+@keyframes pulse {
+    from { background-color: #6efd58; }
+    to { background-color: #7dff66; }
+}
